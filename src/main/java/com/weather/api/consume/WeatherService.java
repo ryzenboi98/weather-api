@@ -23,9 +23,8 @@ public class WeatherService {
     private String weatherAPIKey;
 
     public WeatherDTO getOne() {
-        String url = weatherURL + "/weather" + "?appid=" + weatherAPIKey + "&q=Viseu" + "&units=metrics";
+        String url = weatherURL + "/weather" + "?appid=" + weatherAPIKey + "&q=Viseu" + "&units=metric";
 
-        return restTemplate.getForObject(url,
-                WeatherDTO.class);
+        return restTemplate.getForObject(url, WeatherDTO.class);
     }
 }
