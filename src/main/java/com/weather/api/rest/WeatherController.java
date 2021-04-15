@@ -20,8 +20,6 @@ public class WeatherController {
     @Autowired
     private ObjectMapper mapper;
 
-    //
-
     @GetMapping
     public WeatherDTO getWeatherByCity(@RequestParam("location") String location) {
         return weatherService.getOne(location);
