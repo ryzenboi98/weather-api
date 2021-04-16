@@ -1,8 +1,9 @@
 package com.weather.api.entities;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.*;
+import javax.websocket.ClientEndpoint;
 
 public class Coordinates {
     @JsonProperty("lon")
@@ -10,7 +11,6 @@ public class Coordinates {
 
     @JsonProperty("lat")
     private float latitude;
-
 
     public Coordinates() {
     }

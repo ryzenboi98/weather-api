@@ -2,11 +2,7 @@ package com.weather.api.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.lang.reflect.Array;
-import java.util.List;
-
-public class WeatherDTO {
-    private Long id;
+public class LocationDTO {
     private String name;
 
     @JsonProperty("coord")
@@ -15,15 +11,13 @@ public class WeatherDTO {
     @JsonProperty("sys")
     private Country country;
 
-    public WeatherDTO() {
+    public LocationDTO() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public LocationDTO(String name, Coordinates coordinates, Country country) {
+        this.name = name;
+        this.coordinates = coordinates;
+        this.country = country;
     }
 
     public String getName() {
@@ -40,5 +34,13 @@ public class WeatherDTO {
 
     public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }
