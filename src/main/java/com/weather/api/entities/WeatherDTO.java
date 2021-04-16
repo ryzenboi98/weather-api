@@ -9,25 +9,13 @@ public class WeatherDTO {
     private Long id;
     private String name;
 
-    @JsonProperty("dt")
-    private Long date;
-
     @JsonProperty("coord")
     private Coordinates coordinates;
 
-    @JsonProperty("main")
-    private WeatherTemp weatherTemp;
-
-    @JsonProperty("weather")
-    private List<WeatherInfo> weatherInfo;
+    @JsonProperty("sys")
+    private Country country;
 
     public WeatherDTO() {
-    }
-
-    public WeatherDTO(Long id, String name, Long date) {
-        this.id = id;
-        this.name = name;
-        this.date = date;
     }
 
     public Long getId() {
@@ -46,11 +34,11 @@ public class WeatherDTO {
         this.name = name;
     }
 
-    public Long getDate() {
-        return date;
+    public Coordinates getCoordinates() {
+        return coordinates;
     }
 
-    public void setDate(Long date) {
-        this.date = date;
+    public void setCoordinates(Coordinates coordinates) {
+        this.coordinates = coordinates;
     }
 }
