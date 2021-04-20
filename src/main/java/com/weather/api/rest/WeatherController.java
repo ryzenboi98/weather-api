@@ -31,12 +31,14 @@ public class WeatherController {
         LocationDTO locationDTO = weatherService.getLocation(location);
 
         List<LocationDAO> results = locationCRUDActions.
-                findByNameAndCountry(locationDTO.getName(), locationDTO.getCountry().getName());
+                findByNameAndCountry(
+                        locationDTO.getName(),
+                        locationDTO.getCountry().getName()
+                );
 
-        if (results.isEmpty()) {
+        if (results.isEmpty())
             return locationCRUDActions.createLocation(locationDTO);
-        } else {
+        else
             return results.get(0);
-        }
     }
 }
