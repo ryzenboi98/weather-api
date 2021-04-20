@@ -19,7 +19,7 @@ public class WeatherService {
     @Value("${resource.api_key}")
     private String weatherAPIKey;
 
-    public LocationDTO getOne(String location) {
+    public LocationDTO getLocation(String location) {
         String url = weatherURL + "/weather" + "?appid=" + weatherAPIKey + "&q="+ location + "&units=metric";
 
         LocationDTO weather;
@@ -29,8 +29,6 @@ public class WeatherService {
         } catch (HttpClientErrorException e) {
             throw new LocationNotFoundException();
         }
-
-
 
         return weather;
     }

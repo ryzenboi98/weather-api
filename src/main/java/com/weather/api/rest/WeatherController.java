@@ -2,18 +2,23 @@ package com.weather.api.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.weather.api.consume.WeatherService;
+import com.weather.api.crud.LocationCRUDActions;
 import com.weather.api.entities.LocationDAO;
 import com.weather.api.entities.LocationDTO;
 import com.weather.api.repository.LocationRepository;
+import org.apache.catalina.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/weather/")
 public class WeatherController {
 
     @Autowired
-    LocationRepository locationRepo;
+    LocationCRUDActions locationCRUDActions;
 
     @Autowired
     private WeatherService weatherService;
@@ -23,19 +28,15 @@ public class WeatherController {
 
     @GetMapping
     public LocationDAO getWeatherByCity(@RequestParam("location") String location) {
-        LocationDTO locationDTO = weatherService.getOne(location);
+        LocationDTO locationDTO = weatherService.getLocation(location);
 
-        LocationDAO locationDAO = new LocationDAO(
-                locationDTO.getName(),
-                locationDTO.getCountry().getName(),
-                locationDTO.getCoordinates().getLatitude(),
-                locationDTO.getCoordinates().getLongitude()
-        );
+        List<LocationDAO> results = locationCRUDActions.
+                findByNameAndCountry(locationDTO.getName(), locationDTO.getCountry().getName());
 
-        locationRepo.save(locationDAO);
-
-        return locationRepo.findById(1);
-
-        //return locationDTO;
+        if (results.isEmpty()) {
+            return locationCRUDActions.createLocation(locationDTO);
+        } else {
+            return results.get(0);
+        }
     }
 }
