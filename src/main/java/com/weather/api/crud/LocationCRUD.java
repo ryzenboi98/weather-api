@@ -33,7 +33,12 @@ public class LocationCRUD implements LocationCRUDActions{
     }
 
     @Override
-    public List<LocationDAO> findByNameAndCountry(String name, String country) {
-        return locationRepo.findByNameAndCountry(name, country);
+    public List<LocationDAO> findByNameAndCountry(String location) {
+        String[] parts = location.split(",");
+
+        if(parts.length == 1)
+            return locationRepo.findByName(parts[0]);
+        else
+            return locationRepo.findByNameAndCountry(parts[0], parts[1]);
     }
 }

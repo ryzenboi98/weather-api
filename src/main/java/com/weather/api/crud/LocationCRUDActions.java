@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface LocationCRUDActions {
     LocationDAO createLocation(LocationDTO locationDTO);
-    List<LocationDAO> findByNameAndCountry(String name, String country);
+    List<LocationDAO> findByNameAndCountry(String location);
 }

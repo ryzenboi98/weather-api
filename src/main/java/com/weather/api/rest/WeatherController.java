@@ -10,6 +10,7 @@ import org.apache.catalina.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.sound.midi.SysexMessage;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,16 +29,18 @@ public class WeatherController {
 
     @GetMapping
     public LocationDAO getWeatherByCity(@RequestParam("location") String location) {
-        LocationDTO locationDTO = weatherService.getLocation(location);
+        LocationDTO locationDTO;
 
-        List<LocationDAO> results = locationCRUDActions.
-                findByNameAndCountry(
-                        locationDTO.getName(),
-                        locationDTO.getCountry().getName()
-                );
+        List<LocationDAO> results = locationCRUDActions.findByNameAndCountry(location);
 
-        if (results.isEmpty())
+        for (LocationDAO loc : results)
+            System.out.println(loc.getId());
+
+        if (results.isEmpty()) {
+            locationDTO = weatherService.getLocation(location);
+
             return locationCRUDActions.createLocation(locationDTO);
+        }
         else
             return results.get(0);
     }
