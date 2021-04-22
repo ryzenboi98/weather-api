@@ -22,6 +22,8 @@ public class WeatherService {
     public LocationDTO getLocation(String location) {
         String url = weatherURL + "/weather" + "?appid=" + weatherAPIKey + "&q="+ location + "&units=metric";
 
+        System.out.println(url);
+
         LocationDTO weather;
 
         try {
