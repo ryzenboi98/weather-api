@@ -14,9 +14,6 @@ public class LocationCRUD implements LocationCRUDActions{
     @Autowired
     LocationRepository locationRepo;
 
-    public LocationCRUD() {
-    }
-
     @Override
     public LocationDAO createLocation(LocationDTO locationDTO) {
 
