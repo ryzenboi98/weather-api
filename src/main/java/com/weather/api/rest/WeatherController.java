@@ -33,9 +33,6 @@ public class WeatherController {
 
         List<LocationDAO> results = locationCRUDActions.findByNameAndCountry(location);
 
-        for (LocationDAO loc : results)
-            System.out.println(loc.getId());
-
         if (results.isEmpty()) {
             locationDTO = weatherService.getLocation(location);
 
