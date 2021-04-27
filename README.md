@@ -69,8 +69,13 @@ Then you need to setup that **API Key value** as an **environment variable** wit
 ### Build with docker-compose
 
 * After setting up your **environment variable** simply download the project and extract the project folder to any location in your system.
+ 
 * Open up **Docker Desktop** and wait until it is fully initialized.
+
 * Open a terminal and navigate to the project **root folder**.
+ 
 * Execute the command `docker-compose build` and wait until the docker image is built.
+
 * Execute the command `docker-compose up` to start the application server.
+
 * Test out the application using this [link](http://localhost:8080/weather/?location=Portugal).
