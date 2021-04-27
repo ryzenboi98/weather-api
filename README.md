@@ -33,5 +33,5 @@ The `country` has to be the exact name of a country or the country code, for exa
 ### Request example
 
 ```http
-GET 
+GET https://weather-rapi.herokuapp.com/weather/?location=USA
 ```
