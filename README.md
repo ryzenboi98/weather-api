@@ -26,10 +26,10 @@ This parameter can take the data in the following formats:
 
 The `location` has to be the exact name of a village, town or city. 
 <br/>
-The `country` has to be the exact name of a country or the country code, for example, `USA` for United States of America.
+The `country` has to be the exact name of a country or the country code, for example, `PT` for Portugal.
 
 ### Request example
 You can test out a simple request using the following method
 ```http
-GET https://weather-rapi.herokuapp.com/weather/?location=USA
+GET https://weather-rapi.herokuapp.com/weather/?location=PT
 ```
