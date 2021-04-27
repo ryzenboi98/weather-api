@@ -12,4 +12,6 @@ We can see the application in a very simple way, just as it is demonstrated in t
   <img src="https://github.com/ryzenboi98/weather-api/blob/main/structure.png">
 </div>
 
-We use use the Spring Boot [RestTemplate](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) class to make HTTP requests to the [OpenWeather](https://openweathermap.org/api) API for obtaining the weather data. Some of the obtained data will be stored in our in-memory H2 Database Engine through the Java Persistance API (JPA).
+We use use the Spring Boot [RestTemplate](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) class to make HTTP requests to the [OpenWeather](https://openweathermap.org/api) API for obtaining the weather data. 
+
+Some of the obtained data will be stored in our in-memory H2 Database Engine through the Java Persistance API (JPA).
