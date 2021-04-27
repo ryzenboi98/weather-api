@@ -26,7 +26,7 @@ This parameter can take the data in the following formats:
 
 The `location` has to be the exact name of a village, town or city. 
 <br/>
-The `country` has to be the exact name of a country or the country code, for example, `PT` for Portugal.
+The `country` has to be the exact name of a country.
 
 ### Request example
 You can test out a simple request using the following method
