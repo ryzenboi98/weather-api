@@ -1,7 +1,7 @@
 # weather-api
 A Weather API that consumes the Open Weather API using Spring Boot
 
-Test out the weather for Portugal in the following [link](weather-rapi.herokuapp.com/weather/?location=Portugal) deployed on [Heroku](https://www.heroku.com)
+Test out the weather for Portugal in the following [link](https://weather-rapi.herokuapp.com/weather/?location=Portugal) deployed on [Heroku](https://www.heroku.com)
 
 If you want to test it out locally, you can build the application using the **Docker** guide provided in the **Docker Setup** section
 
