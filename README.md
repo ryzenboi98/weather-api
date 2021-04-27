@@ -3,7 +3,7 @@ A Weather API that consumes the Open Weather API using Spring Boot
 
 Test out the weather for Portugal in the following [link](weather-rapi.herokuapp.com/weather/?location=Portugal) deployed on [Heroku](https://www.heroku.com)
 
-If you want to test it out locally, you can build the application using the `Docker` guide provided in the **Docker Setup** section
+If you want to test it out locally, you can build the application using the **Docker** guide provided in the **Docker Setup** section
 
 ## What does the Weather API offers?
 This Weather API was built for users to search for any location and obtain the current weather information, as well as hourly and daily weather information up to 7 days.
@@ -22,17 +22,17 @@ We use use the Spring Boot [RestTemplate](https://docs.spring.io/spring-framewor
 Some of the obtained data will be stored in our in-memory H2 Database Engine through the Java Persistance API (JPA).
 
 ## API doc
-The API has only a simple `GET Request` method which requires a parameter called `location`.
+The API has only a simple **GET Request** method which requires a parameter called **location**.
 
 This parameter can take the data in the following formats:
 
 `<location>,<country>`, just `<location>` or simply `<country>`
 
-The `location` has to be the exact name of a village, town or city. 
+The **location** has to be the exact name of a village, town or city. 
 <br/>
-The `country` has to be the exact name of a country.
+The **country** has to be the exact name of a country.
 <br/>
-When providing both `location` and `country` strings make sure the `country` corresponds to the country code (e.g. 'PT' for Portugal)
+When providing both **location** and **country** strings, make sure  **country** corresponds to the country code (e.g. 'PT' for Portugal).
 
 ### Request example
 You can test out a simple request using the following method
