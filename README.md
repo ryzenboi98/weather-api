@@ -31,7 +31,7 @@ The `location` has to be the exact name of a village, town or city.
 The `country` has to be the exact name of a country or the country code, for example, `USA` for United States of America.
 
 ### Request example
-
+You can test out a simple request using the following method
 ```http
 GET https://weather-rapi.herokuapp.com/weather/?location=USA
 ```
