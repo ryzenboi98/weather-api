@@ -35,5 +35,5 @@ The `country` has to be the exact name of a country.
 ### Request example
 You can test out a simple request using the following method
 ```http
-GET https://weather-rapi.herokuapp.com/weather/?location=PT
+GET https://weather-rapi.herokuapp.com/weather/?location=Portugal
 ```
