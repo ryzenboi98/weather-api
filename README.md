@@ -29,9 +29,9 @@ This parameter can take the data in the following formats:
 Just `<location>`, `<country>` or both `<location>,<country>`
 
 * The **location** has to be the exact name of a village, town or city. 
-<br/>
+
 * The **country** has to be the exact name of a country.
-<br/>
+
 * When providing both **location** and **country**, make sure  **country** is the country code (e.g. PT for Portugal).
 
 ### Request examples
