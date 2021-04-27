@@ -25,3 +25,5 @@ This parameter can take the data in the following formats:
 `<location>,<country>`
 `<location>`
 `<country>`
+
+The `location` can be the exact name of a village, town or city while the country has to be the exact name of the country or the country code  fro example, `USA` for United States of America.
