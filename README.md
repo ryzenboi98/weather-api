@@ -16,3 +16,12 @@ We can see the application in a very simple way, just as it is demonstrated in t
 We use use the Spring Boot [RestTemplate](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) class to make HTTP requests to the [OpenWeather](https://openweathermap.org/api) API for obtaining the weather data. 
 
 Some of the obtained data will be stored in our in-memory H2 Database Engine through the Java Persistance API (JPA).
+
+## API doc
+The API has only a simple GET Request method which requires a parameter called `location`.
+
+This parameter can take the data in the following formats:
+
+`<location>,<country>`
+`<location>`
+`<country>`
