@@ -22,9 +22,7 @@ The API has only a simple `GET Request` method which requires a parameter called
 
 This parameter can take the data in the following formats:
 
-`<location>,<country>`
-`<location>`
-`<country>`
+`<location>,<country>`, just `<location>` or simply `<country>`
 
 The `location` has to be the exact name of a village, town or city. 
 <br/>
