@@ -18,7 +18,7 @@ We use use the Spring Boot [RestTemplate](https://docs.spring.io/spring-framewor
 Some of the obtained data will be stored in our in-memory H2 Database Engine through the Java Persistance API (JPA).
 
 ## API doc
-The API has only a simple GET Request method which requires a parameter called `location`.
+The API has only a simple `GET Request` which requires a parameter called `location`.
 
 This parameter can take the data in the following formats:
 
