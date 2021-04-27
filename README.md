@@ -39,3 +39,11 @@ You can test out a simple request using the following method
 ```http
 GET https://weather-rapi.herokuapp.com/weather/?location=Portugal
 ```
+## Docker Setup
+
+This section is a guide for setting up this project locally.
+
+### API key environment
+
+Since we are consuming [OpenWeather](https://openweathermap.org/api) API you will need to setup an **environment variable** for the **OpenWeather API key**.
+You can do that by simple register in the [OpenWeather](https://home.openweathermap.org/users/sign_up) web page and check fo the **API Key** in your web site profile.
