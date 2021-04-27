@@ -43,6 +43,10 @@ GET https://weather-rapi.herokuapp.com/weather/?location=Portugal
 
 This section is a guide for setting up this project locally.
 
+### Docker installation
+
+If you don't have the **Docker** application installed in your system you need to install it following the steps on this [link](https://docs.docker.com/get-docker/) depending on your OS.
+
 ### API key environment
 
 Since we are consuming [OpenWeather](https://openweathermap.org/api) API you will need to setup an **environment variable** for the **OpenWeather API key**.
