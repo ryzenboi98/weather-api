@@ -34,10 +34,15 @@ The **country** has to be the exact name of a country.
 <br/>
 When providing both **location** and **country**, make sure  **country** is the country code (e.g. PT for Portugal).
 
-### Request example
-You can test out a simple request using the following method
+### Request examples
+You can test out a simple request using the following method for a country
 ```http
 GET https://weather-rapi.herokuapp.com/weather/?location=Portugal
+```
+
+For a village
+```http
+GET https://weather-rapi.herokuapp.com/weather/?location=Ucanha
 ```
 ## Docker Setup
 
