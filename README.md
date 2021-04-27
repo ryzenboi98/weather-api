@@ -26,7 +26,7 @@ The API has only a simple **GET Request** method which requires a parameter call
 
 This parameter can take the data in the following formats:
 
-`<location>,<country>`, just `<location>` or simply `<country>`
+Just `<location>`, `<country>` or both `<location>,<country>`
 
 The **location** has to be the exact name of a village, town or city. 
 <br/>
@@ -35,15 +35,21 @@ The **country** has to be the exact name of a country.
 When providing both **location** and **country**, make sure  **country** is the country code (e.g. PT for Portugal).
 
 ### Request examples
-You can test out a simple request using the following method for a country
+You can test out a simple request using the following method for a village
+```http
+GET https://weather-rapi.herokuapp.com/weather/?location=Ucanha
+```
+
+For a country
 ```http
 GET https://weather-rapi.herokuapp.com/weather/?location=Portugal
 ```
 
-For a village
+For both village and country 
 ```http
-GET https://weather-rapi.herokuapp.com/weather/?location=Ucanha
+GET https://weather-rapi.herokuapp.com/weather/?location=Ucanha,PT
 ```
+
 ## Docker Setup
 
 This section is a guide for setting up this project locally.
