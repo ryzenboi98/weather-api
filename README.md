@@ -6,7 +6,7 @@ Test out the weather for Portugal in the following [link](https://weather-rapi.h
 If you want to test it out locally, you can build the application using the **Docker** guide provided in the **Docker Setup** section
 
 ## What does the Weather API offers?
-This Weather API was built for users to search for any location and obtain the current weather information, as well as hourly and daily weather information up to 7 days.
+This Weather API was built for users to search any location and obtain the current weather information, as well as hourly and daily weather information up to 7 days.
 
 All this data is obtained from the [OpenWeather](https://openweathermap.org/api) open source API.
 
