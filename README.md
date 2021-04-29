@@ -35,7 +35,9 @@ Just `<location>`, `<country>` or both `<location>,<country>`
 * When providing both **location** and **country**, make sure  **country** is the country code (e.g. PT for Portugal).
 
 ### Request examples
-You can test out a simple request using the following method for a village
+You can test out a simple request using the following method
+
+For a village
 ```http
 GET https://weather-rapi.herokuapp.com/weather/?location=Ucanha
 ```
